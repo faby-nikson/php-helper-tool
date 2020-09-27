@@ -1,0 +1,32 @@
+{
+    "name": "faby/php-helper-tool",
+    "description": "PHP Helper tool.",
+    "require": {
+        "php": ">7.4",
+        "ext-json": "*",
+        "ext-zlib": "*",
+        "symfony/console": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Faby\\PhpHelper\\": "src/"
+        }
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        }
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "symfony/var-dumper": "^5.1"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true,
+        "bin-dir": "bin/"
+    }
+}
