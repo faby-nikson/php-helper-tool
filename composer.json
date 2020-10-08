@@ -1,5 +1,5 @@
 {
-    "name": "faby/php-helper-tool",
+    "name": "f-dumas/php-helper-tool",
     "description": "PHP Helper tool.",
     "require": {
         "php": ">7.4",
@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Faby\\PhpHelper\\": "src/"
+            "FDTool\\PhpHelper\\": "src/"
         }
     },
     "scripts": {
