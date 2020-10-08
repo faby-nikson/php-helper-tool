@@ -10,7 +10,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class ChangePhpVersionCommand extends Command
 {
-    protected static $defaultName = "fdtool:php-helper:change-version";
+    protected static $defaultName = 'fdtool:php-helper:change-version';
 
     private $outputDisplayer;
     private $commandStartTimestamp;
@@ -32,7 +32,7 @@ class ChangePhpVersionCommand extends Command
 
     private function initOptionsAndArguments(InputInterface $input): void
     {
-        $this->version = (string)$input->getArgument("version");
+        $this->version = (string) $input->getArgument('version');
     }
 
     private function initOutput(OutputInterface $output): void
@@ -48,8 +48,8 @@ class ChangePhpVersionCommand extends Command
         $this->changePhpVersion();
 
         $this->outputDisplayer->display(
-            sprintf("Command ended in %ss", time() - $this->commandStartTimestamp),
-            "comment"
+            sprintf('Command ended in %ss', time() - $this->commandStartTimestamp),
+            'comment'
         );
 
         return Command::SUCCESS;
@@ -58,18 +58,18 @@ class ChangePhpVersionCommand extends Command
     private function changePhpVersion(): void
     {
         $this->outputDisplayer->display(
-            sprintf("Activate the following PHP version %s", $this->version),
-            "info"
+            sprintf('Activate the following PHP version %s', $this->version),
+            'info'
         );
 
-        if (!file_exists(sprintf("/usr/bin/php%s", $this->version))) {
-            throw new \RuntimeException("The PHP version has not been found");
+        if (!file_exists(sprintf('/usr/bin/php%s', $this->version))) {
+            throw new \RuntimeException('The PHP version has not been found');
         }
 
         $command = sprintf('sudo update-alternatives --set php "/usr/bin/php%s"', $this->version);
         $this->outputDisplayer->display(
-            sprintf("Run the following command: %s", $command),
-            "info"
+            sprintf('Run the following command: %s', $command),
+            'info'
         );
 
         shell_exec($command);

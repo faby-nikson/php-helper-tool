@@ -19,6 +19,7 @@
         }
     },
     "require-dev": {
+        "m6web/php-cs-fixer-config": "^1.3",
         "roave/security-advisories": "dev-master",
         "symfony/var-dumper": "^5.1"
     },

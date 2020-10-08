@@ -1,14 +1,12 @@
 <?php
 
-
 namespace FDTool\PhpHelper\Xdebug;
-
 
 abstract class XdebugShell
 {
     public static function isXdebugEnabled(): bool
     {
-        return (bool)shell_exec("php -m | grep 'xdebug'");
+        return (bool) shell_exec("php -m | grep 'xdebug'");
     }
 
     public static function enableXdebug(string $xDebugConfigFile): void
