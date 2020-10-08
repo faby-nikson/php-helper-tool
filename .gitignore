@@ -1,0 +1,23 @@
+# Logs (Symfony4)
+/var/log/*
+!var/log/.gitkeep
+
+# Managed by Composer
+/var/bootstrap.php.cache
+/bin/*
+/vendor/
+
+# PHPUnit & other
+/app/phpunit.xml
+/phpunit.xml
+/.php_cs.cache
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/src/.preload.php
+/var/
+###< symfony/framework-bundle ###
