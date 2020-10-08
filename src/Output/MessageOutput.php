@@ -7,7 +7,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class MessageOutput
 {
-    protected OutputInterface $output;
+    protected $output;
 
     public function __construct(OutputInterface $output)
     {

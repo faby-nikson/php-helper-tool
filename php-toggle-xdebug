@@ -7,7 +7,7 @@ use Symfony\Component\Console\Application;
 
 $application = new Application();
 
-$command = new \FDTool\PhpHelper\Command\ChangePhpVersionCommand();
+$command = new \FDTool\PhpHelper\Command\ToggleXdebugCommand();
 $application->add($command);
 $application->setDefaultCommand($command->getName(), true);
 

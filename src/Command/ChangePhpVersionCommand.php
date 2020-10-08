@@ -12,9 +12,9 @@ class ChangePhpVersionCommand extends Command
 {
     protected static $defaultName = "fdtool:php-helper:change-version";
 
-    private MessageOutput $outputDisplayer;
-    private int $commandStartTimestamp;
-    private string $version;
+    private $outputDisplayer;
+    private $commandStartTimestamp;
+    private $version;
 
     protected function configure(): void
     {
@@ -72,6 +72,6 @@ class ChangePhpVersionCommand extends Command
             "info"
         );
 
-      //  shell_exec($command);
+        shell_exec($command);
     }
 }
