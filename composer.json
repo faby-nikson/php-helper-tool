@@ -2,7 +2,7 @@
     "name": "f-dumas/php-helper-tool",
     "description": "PHP Helper tool.",
     "require": {
-        "php": ">7.4",
+        "php": ">8.1",
         "ext-json": "*",
         "ext-zlib": "*",
         "symfony/console": "^5.1"

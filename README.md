@@ -11,13 +11,13 @@ PHP helper tools to make your life easier.
 - Change your php version by using the following command:
  
 ```
-./php-change-version {your-tergetted-version}
+./php-tool-version {your-tergetted-version}
 ```
 
 Example:
 ```
 php --version
-./php-change-version 7.2
+./php-tool-version 7.2
 php --version
 ```
 
@@ -26,5 +26,5 @@ php --version
 - If you want to toggle xdebug (according to your usage), use the following command:
  
  ```
-./php-toggle-xdebug
+./php-tool-xdebug
  ```
