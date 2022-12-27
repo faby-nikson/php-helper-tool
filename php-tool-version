@@ -1,3 +1,15 @@
-# todo get arguments
+#!/bin/bash
 
-sudo update-alternatives --set php "/usr/bin/php%s"
+die() {
+  echo >&2 "$@"
+  exit 1
+}
+
+[ "$#" -eq 1 ] || die "You must specify the php version to change to."
+echo $1 | grep -E -q '^[0-9\.]+$' || die "Numeric argument with semver required, $1 provided"
+
+phpVer=$1
+dir="/etc/php/$phpVer"
+[ -d "$dir" ] || die "Directory $dir does not exist"
+
+sudo update-alternatives --set php "/usr/bin/php$phpVer"
